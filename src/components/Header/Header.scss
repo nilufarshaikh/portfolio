@@ -1,0 +1,53 @@
+@use "../../styles/partials/mixins" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1.5;
+
+  &__text {
+    font-family: "jenthill";
+    font-size: 32px;
+    transform: rotate(-5deg) skew(-5deg);
+    &::selection {
+      color: #fafca2;
+      background: #404040;
+    }
+  }
+}
+
+.nav {
+  flex: 3;
+
+  &__list {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      justify-content: end;
+      gap: 16px;
+      list-style: none;
+      padding: 24px 8rem 24px 24px;
+    }
+  }
+
+  &__item {
+    font-size: 18px;
+    font-weight: 600;
+    &::selection {
+      color: #fafca2;
+      background: #404040;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-style: wavy;
+    }
+  }
+}

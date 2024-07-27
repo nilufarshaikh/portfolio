@@ -1,0 +1,65 @@
+.intro {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  gap: 50px;
+
+  &__hero {
+    background-color: #fafca2;
+    flex: 2;
+    padding: 80px 0 110px 8rem;
+  }
+
+  &__hero-img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    padding: 36px 8rem 110px 0;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__name-text {
+    font-family: "Jenthill";
+    font-size: 22px;
+    transform: rotate(-5deg) skew(-5deg);
+    margin-left: -30%;
+    &::selection {
+      color: #fafca2;
+      background: #404040;
+    }
+  }
+
+  &__text {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+    color: #404040fc;
+    font-weight: 700;
+
+    &::selection {
+      color: #fafca2;
+      background: #404040;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 16px;
+    padding-top: 24px;
+  }
+
+  &__button {
+    box-shadow: 8px 8px;
+    width: 150px;
+    height: 40px;
+    background-color: #ebebeb;
+    align-self: center;
+    cursor: pointer;
+  }
+}
