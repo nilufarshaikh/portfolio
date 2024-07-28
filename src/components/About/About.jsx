@@ -34,9 +34,9 @@ const skills = [
   { src: canva, alt: "Canva" },
 ];
 
-const About = () => {
+const About = ({ aboutRef }) => {
   return (
-    <section className="about">
+    <section className="about" ref={aboutRef}>
       <h2 className="about__title">about me.</h2>
       <div className="about__wrapper">
         <article className="about__left">
@@ -57,7 +57,7 @@ const About = () => {
               in Software Engineering from BrainStation, Canada 👩🏽‍🎓
             </li>
             <li className="about__content-item">
-              ✔️ I thrive on solving
+              ✔️ thrive on solving
               <span className="about__cursive-text">complex problems</span>with
               elegant code solutions 💻
             </li>

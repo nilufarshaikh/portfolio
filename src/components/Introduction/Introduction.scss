@@ -5,12 +5,17 @@
   justify-content: center;
   position: relative;
   gap: 50px;
+  align-items: center;
+
+  @include desktop {
+    min-height: 85vh;
+  }
 
   &__hero {
     display: none;
 
     @include desktop {
-      display: flex;
+      display: block;
       flex: 2;
       padding: 80px 0 110px 8rem;
     }

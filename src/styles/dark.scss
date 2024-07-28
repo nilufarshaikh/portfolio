@@ -53,4 +53,8 @@ button {
 
 .icon {
   fill: #ffffff;
+
+  &:hover {
+    fill: #c000ff;
+  }
 }

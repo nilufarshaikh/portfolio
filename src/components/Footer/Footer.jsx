@@ -3,9 +3,9 @@ import emailIcon from "../../assets/icons/icons8-gmail.svg";
 import githubIcon from "../../assets/icons/icons8-github.svg";
 import linkedInIcon from "../../assets/icons/icons8-linked-in.svg";
 
-const Footer = () => {
+const Footer = ({ contactRef }) => {
   return (
-    <footer className="footer">
+    <footer className="footer" ref={contactRef}>
       <p className="footer__text">Nilufar Shaikh | Software Engineer</p>
       <div className="footer__socials">
         <svg
