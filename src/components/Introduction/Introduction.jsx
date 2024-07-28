@@ -22,9 +22,9 @@ const Introduction = () => {
           >
             <button className="intro__button">Download Resume</button>
           </a>
-          <Link to="mail@nilufarrehanshaikh@gmail.com">
+          <a href="mailto:nilufarrehanshaikh@gmail.com">
             <button className="intro__button">Reach Out</button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>
