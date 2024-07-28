@@ -1,11 +1,9 @@
 import "./Introduction.scss";
 import heroSvg from "../../assets/images/hero.png";
-import Lamp from "../Lamp/Lamp";
 
 const Introduction = () => {
   return (
     <section className="section intro">
-      <Lamp />
       <div className="intro__hero">
         <img className="intro__hero-img" src={heroSvg} alt="" />
       </div>
@@ -21,7 +19,7 @@ const Introduction = () => {
             href="/Nilufar_Shaikh_Resume.pdf"
             download="Nilufar_Shaikh_Resume.pdf"
           >
-            <button className="intro__button">Download Resume</button>
+            <button className="intro__button">Resume</button>
           </a>
           <button className="intro__button">Reach Out</button>
         </div>

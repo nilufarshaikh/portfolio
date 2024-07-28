@@ -18,7 +18,7 @@ const Projects = () => {
             </p>
             <button className="card__button">Github Link</button>
           </div>
-          <div className="card__body">
+          <div className="card__img-wrapper">
             <img className="card__img" src={project1} alt="" />
           </div>
         </article>
@@ -34,7 +34,7 @@ const Projects = () => {
             </p>
             <button className="card__button">Github Link</button>
           </div>
-          <div className="card__body">
+          <div className="card__img-wrapper">
             <img className="card__img" src={project2} alt="" />
           </div>
         </article>
@@ -49,7 +49,7 @@ const Projects = () => {
             </p>
             <button className="card__button">Github Link</button>
           </div>
-          <div className="card__body">
+          <div className="card__img-wrapper">
             <img className="card__img" src={project2} alt="" />
           </div>
         </article>
@@ -64,7 +64,7 @@ const Projects = () => {
             </p>
             <button className="card__button">Github Link</button>
           </div>
-          <div className="card__body">
+          <div className="card__img-wrapper">
             <img className="card__img" src={project2} alt="" />
           </div>
         </article>

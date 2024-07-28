@@ -1,41 +1,67 @@
+@use "../../styles/partials/mixins" as *;
+
 .projects {
-  padding: 100px 8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 
   &__title {
-    font-size: 52px;
-    line-height: 32px;
+    font-size: 32px;
+    line-height: 22px;
+    padding: 24px 0;
+
+    @include desktop {
+      font-size: 52px;
+      line-height: 32px;
+    }
   }
 
   &__items {
     display: flex;
-    align-items: center;
-    padding-top: 48px;
-    gap: 48px;
-    row-gap: 48px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+
+    @include desktop {
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      padding: 16px 0 0 0;
+      gap: 48px;
+      row-gap: 48px;
+      flex-wrap: wrap;
+    }
   }
 
   &__button {
+    margin: 24px 0;
     box-shadow: 8px 8px;
     width: 120px;
-    height: 40px;
-    background-color: #ebebeb;
-    align-self: center;
+    padding: 8px 16px;
+
+    @include desktop {
+      align-self: center;
+      margin: auto;
+    }
   }
 }
 
 .card {
-  height: 245px;
   display: flex;
-  padding: 24px;
+  flex-direction: column;
+  padding: 16px;
   border-radius: 16px;
-  max-width: 436px;
-  border: 2px solid #404040fc;
-  background: #ebebeb;
+
+  @include tablet {
+    flex-direction: row;
+    max-width: 436px;
+    height: 245px;
+    padding: 24px;
+  }
+
+  @include desktop {
+  }
 
   &__header {
     width: 72px;
@@ -45,9 +71,22 @@
     margin-left: -12px;
   }
 
+  &__img-wrapper {
+    order: -1;
+    max-width: 300px;
+
+    @include desktop {
+      order: 0;
+      width: 300px;
+      height: 300px;
+    }
+  }
+
   &__body {
-    width: 300px;
-    height: 300px;
+    @include desktop {
+      width: 300px;
+      height: 300px;
+    }
   }
 
   &__img {
@@ -60,9 +99,7 @@
     padding: 8px 32px;
     border-radius: 16px;
     margin-top: 24px;
-    border: 2px solid #404040fc;
     cursor: pointer;
-    background-color: #c000ff;
   }
 
   &__title {

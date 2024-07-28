@@ -37,63 +37,61 @@ const skills = [
 const About = () => {
   return (
     <section className="about">
-      <article className="about__left">
-        <h2 className="about__title">about me.</h2>
-        <ul className="about__content">
-          <li className="about__content-item">
-            ✔️ a<span className="about__cursive-text">passionate</span>
-            full stack software engineer with over 6 years of experience 👩‍💻
-          </li>
-          <li className="about__content-item">
-            ✔️ have
-            <span className="about__cursive-text">Masters</span>
-            degree in Computer Applications from St. Aloysius College, India 👩🏽‍🎓
-          </li>
-          <li className="about__content-item">
-            ✔️ also, have a<span className="about__cursive-text">Diploma</span>
-            in Software Engineering from BrainStation, Canada 👩🏽‍🎓
-          </li>
-          <li className="about__content-item">
-            ✔️ I thrive on solving
-            <span className="about__cursive-text">complex problems</span>with
-            elegant code solutions 💻
-          </li>
-          <li className="about__content-item">
-            ✔️ Beyond the code, I'm a lifelong learner, a travel-enthusiast, and
-            a<span className="about__cursive-text">Kdrama</span>fan 🫰
-          </li>
-          <li className="about__content-item">
-            ✔️ My<span className="about__cursive-text">skills</span>include 👇
-          </li>
-        </ul>
-
-        <div className="skills">
-          {skills.map((skill, index) => (
-            <div key={index} className="skills__wrapper">
-              <img
-                className="skills__icon"
-                src={skill.src}
-                alt={skill.alt}
-                title={skill.alt}
-              />
-            </div>
-          ))}
-        </div>
-      </article>
-      <article className="about__right">
-        <div className="about__items">
-          <article className="profile">
-            <div className="profile__header">that's me 😊</div>
-            <div className="profile__body">
-              <img
-                className="profile__img"
-                src={profile}
-                alt="Nilufar Shaikh profile"
-              />
-            </div>
-          </article>
-        </div>
-      </article>
+      <h2 className="about__title">about me.</h2>
+      <div className="about__wrapper">
+        <article className="about__left">
+          <ul className="about__content">
+            <li className="about__content-item">
+              ✔️ a<span className="about__cursive-text">passionate</span>
+              full stack software engineer with over 6 years of experience 👩‍💻
+            </li>
+            <li className="about__content-item">
+              ✔️ have
+              <span className="about__cursive-text">Masters</span>
+              degree in Computer Applications from St. Aloysius College, India
+              👩🏽‍🎓
+            </li>
+            <li className="about__content-item">
+              ✔️ also, have a
+              <span className="about__cursive-text">Diploma</span>
+              in Software Engineering from BrainStation, Canada 👩🏽‍🎓
+            </li>
+            <li className="about__content-item">
+              ✔️ I thrive on solving
+              <span className="about__cursive-text">complex problems</span>with
+              elegant code solutions 💻
+            </li>
+            <li className="about__content-item">
+              ✔️ Beyond the code, I'm a lifelong learner, a travel-enthusiast,
+              and a<span className="about__cursive-text">Kdrama</span>fan 🫰
+            </li>
+            <li className="about__content-item">
+              ✔️ My<span className="about__cursive-text">skills</span>include 👇
+            </li>
+          </ul>
+          <div className="skills">
+            {skills.map((skill, index) => (
+              <div key={index} className="skills__wrapper">
+                <img
+                  className="skills__icon"
+                  src={skill.src}
+                  alt={skill.alt}
+                  title={skill.alt}
+                />
+              </div>
+            ))}
+          </div>
+        </article>
+        <article className="about__right">
+          <div className="profile">
+            <img
+              className="profile__img"
+              src={profile}
+              alt="Nilufar Shaikh profile"
+            />
+          </div>
+        </article>
+      </div>
     </section>
   );
 };

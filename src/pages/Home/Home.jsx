@@ -11,9 +11,7 @@ const Home = () => {
       <Header />
       <main className="main">
         <Introduction />
-        <div className="separator separator--one"></div>
         <About />
-        <div className="separator separator--two"></div>
         <Projects />
       </main>
       <Footer />

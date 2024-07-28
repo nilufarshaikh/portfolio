@@ -1,12 +1,24 @@
 import "./Lamp.scss";
 
-const Lamp = () => {
+const Lamp = ({ isDarkMode }) => {
   return (
-    <div id="lampadario">
-      <input type="radio" name="switch" value="on" />
-      <input type="radio" name="switch" value="off" />
+    <div className="lamp">
+      <input
+        type="radio"
+        name="switch"
+        value="on"
+        checked={isDarkMode}
+        readOnly
+      />
+      <input
+        type="radio"
+        name="switch"
+        value="off"
+        checked={!isDarkMode}
+        readOnly
+      />
       <label htmlFor="switch"></label>
-      <div id="filo"></div>
+      <div className="lamp-wire"></div>
     </div>
   );
 };

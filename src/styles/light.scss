@@ -1,46 +1,59 @@
-body {
+body.light-theme {
   background-color: #ffffff;
-  color: #000000;
-}
-
-h1 {
-  // color: #6200ee;
+  color: #404040;
 }
 
 button {
-  color: black;
+  background-color: #ebebeb;
+  box-shadow: 8px 8px #404040;
+  border: 2px solid #404040;
 }
 
-button:hover {
-  background-color: #f0f0f0;
+.profile {
+  background-color: #f7f7f7;
+  border: 2px solid #404040;
 }
 
-// Header section
-.header {
-  background-color: #fafca2;
-}
-
-// Intro section
-.intro {
-  background-color: #fafca2;
-}
-
-// About section
 .about {
-  background-color: #6fdcbf;
+  background-color: #e5c6f1;
 }
 
-//Projects
-.projects {
-  background-color: #ad8fdb;
-}
-
-//Contact
-.contact {
-  background-color: #fafca2;
-}
-
-//Footer
 .footer {
-  background-color: #fafca2;
+  background-color: #e5c6f1;
+}
+
+.card {
+  border: 2px solid #404040;
+  background: #ebebeb;
+  color: #404040;
+
+  &__button {
+    background-color: #c000ff;
+    box-shadow: none;
+    border: 2px solid #404040;
+  }
+}
+
+.profile {
+  box-shadow: 12px 12px #404040;
+}
+
+.logo {
+  color: #404040;
+}
+
+.about {
+  &__title {
+    color: #404040;
+  }
+}
+
+.projects {
+  &__title {
+    color: #404040;
+  }
+}
+
+.icon {
+  fill: #404040;
 }

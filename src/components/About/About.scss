@@ -1,22 +1,40 @@
-.about {
-  display: flex;
-  align-items: center;
+@use "../../styles/partials/mixins" as *;
 
+.about {
   &__title {
-    font-size: 52px;
-    line-height: 32px;
+    font-size: 32px;
+    line-height: 22px;
+    padding: 24px 0;
+
+    @include desktop {
+      font-size: 52px;
+      line-height: 32px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+      gap: 24px;
+    }
   }
 
   &__right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 100px 8rem 100px 24px;
+    order: -1;
+
+    @include desktop {
+      order: 0;
+      flex: 1;
+    }
   }
 
   &__left {
-    flex: 1.5;
-    padding: 100px 24px 100px 8rem;
+    @include desktop {
+      flex: 1.5;
+    }
   }
 
   &__content {
@@ -29,11 +47,6 @@
     list-style: none;
     padding: 8px 0;
     font-size: 20px;
-
-    &::selection {
-      color: #6fdcbf;
-      background: #404040;
-    }
   }
 
   &__items {
@@ -48,37 +61,18 @@
   &__cursive-text {
     font-family: "jenthill";
     font-size: 24px;
-    padding: 0 8px;
-
-    &::selection {
-      color: #6fdcbf;
-      background: #404040;
-    }
+    padding: 0 6px;
   }
 }
 
 .profile {
-  background-color: #f7f7f7;
-  border: 2px solid #404040fc;
-  position: relative;
+  max-width: 300px;
+  height: auto;
+  overflow: hidden;
 
-  &__header {
-    padding: 4px 32px;
-    position: absolute;
-    top: -24px;
-    left: 10%;
-    border: 2px solid #404040fc;
-    background-color: #f7f7f7;
-    z-index: 1;
-    box-shadow: 4px 4px;
-  }
-
-  &__body {
-    width: 380px;
-    max-height: 284px;
-    height: auto;
-    overflow: hidden;
-    box-shadow: 12px 12px;
+  @include desktop {
+    margin-top: 32px;
+    width: 320px;
   }
 
   &__img {

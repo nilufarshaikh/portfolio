@@ -7,23 +7,30 @@
 
 .logo {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex: 1.5;
+  padding: 16px;
+
+  @include desktop {
+    padding-left: 8rem;
+  }
 
   &__text {
     font-family: "jenthill";
     font-size: 32px;
     transform: rotate(-5deg) skew(-5deg);
-    &::selection {
-      color: #fafca2;
-      background: #404040;
-    }
   }
 }
 
 .nav {
-  flex: 3;
+  display: flex;
+  margin-right: 16px;
+
+  @include desktop {
+    justify-content: end;
+    flex: 3;
+    margin-right: 0;
+  }
 
   &__list {
     display: none;
@@ -40,14 +47,133 @@
   &__item {
     font-size: 18px;
     font-weight: 600;
-    &::selection {
-      color: #fafca2;
-      background: #404040;
-    }
 
     &:hover {
       text-decoration: underline;
       text-decoration-style: wavy;
     }
   }
+}
+
+/////////////////////////////////////////////////
+// Day State
+/////////////////////////////////////////////////
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  padding: 4px;
+  border-radius: 40px;
+
+  width: 66px;
+  padding: 2px;
+  border-radius: 40px;
+}
+
+.toggle:before,
+.toggle:after {
+  content: "";
+  display: table;
+}
+
+.toggle:after {
+  clear: both;
+}
+
+.toggle-bg {
+  position: absolute;
+  top: 15px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  background-color: #c0e6f6;
+  border-radius: 40px;
+  border: 2px solid #81c0d5;
+  transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.toggle-input {
+  position: absolute;
+  top: 16px;
+  left: 45px;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  top: 16px;
+  margin-left: 32px;
+  background-color: #f5eb42;
+  border: 2px solid #e4c74d;
+  border-radius: 50%;
+  transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.toggle-switch-figure {
+  position: absolute;
+  bottom: -14px;
+  left: -50px;
+  display: block;
+  width: 80px;
+  height: 30px;
+  border: 8px solid #d4d4d2;
+  border-radius: 20px;
+  background-color: #fff;
+  transform: scale(0.4);
+  transition: all 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  &:after {
+    @include cloudBubble(-65px, -42px, 15px, 15px, 70deg);
+  }
+  &:before {
+    @include cloudBubble(-25px, -10px, 30px, 30px, 30deg);
+  }
+}
+
+.toggle-switch-figureAlt {
+  @include crater(3px, 2px, 2px);
+
+  box-shadow: 42px -7px 0 -3px #fcfcfc, 75px -10px 0 -3px #fcfcfc,
+    54px 4px 0 -4px #fcfcfc, 83px 7px 0 -2px #fcfcfc, 63px 18px 0 -4px #fcfcfc,
+    44px 28px 0 -2px #fcfcfc, 78px 23px 0 -3px #fcfcfc;
+
+  transition: all 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: scale(0);
+}
+
+.toggle-switch-figureAlt:before {
+  @include crater(-3px, 15px, 5px);
+}
+
+.toggle-switch-figureAlt:after {
+  @include crater(14px, 15px, 2px);
+}
+
+/////////////////////////////////////////////////
+// Night State
+/////////////////////////////////////////////////
+.toggle-input:checked ~ .toggle-switch {
+  margin-left: 0;
+  border-color: #dee1c5;
+  background-color: #fffdf2;
+}
+
+.toggle-input:checked ~ .toggle-bg {
+  background-color: #484848;
+  border-color: #000000;
+}
+
+.toggle-input:checked ~ .toggle-switch .toggle-switch-figure {
+  margin-left: 40px;
+  opacity: 0;
+  transform: scale(0.1);
+}
+
+.toggle-input:checked ~ .toggle-switch .toggle-switch-figureAlt {
+  transform: scale(0.7);
 }
