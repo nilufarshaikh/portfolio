@@ -1,14 +1,14 @@
 import "./Projects.scss";
-import project1 from "../../assets/images/project1.png";
-import project2 from "../../assets/images/project2.png";
+import project1 from "../../assets/images/projects/trippeo.png";
+import project2 from "../../assets/images/projects/socialhive.png";
 import { Link } from "react-router-dom";
 
 const Projects = ({ projectsRef }) => {
   const projects = [
     {
       name: "Trippeo - Travel Social Media App",
-      desc: "A fully featured social media app built using React JS, Node JS and MongoDB.",
-      src: project2,
+      desc: "A social media app built using React JS, Node JS and MongoDB.",
+      src: project1,
       features: [
         "Create and share travel stories with a vibrant community",
         "Follow fellow travelers and explore their journeys",
@@ -16,9 +16,9 @@ const Projects = ({ projectsRef }) => {
       link: "https://github.com/nilufarshaikh/trippeo-client",
     },
     {
-      name: "Chat App with Blog Posts CRUD",
-      desc: "A simple Blog with a real-time chat functionality built using Laravel, Node.js and Pusher for WebSocket-based communication.",
-      src: project1,
+      name: "Chat Application with Blog Posts",
+      desc: "A blog with a real-time chat functionality built using Laravel, Node.js and Pusher for WebSocket-based communication.",
+      src: project2,
       features: [
         "Blog posts CRUD (Create, Read, Update, Delete)",
         "Real-time chat functionality",
