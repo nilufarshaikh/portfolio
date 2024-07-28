@@ -1,5 +1,6 @@
 import "./Introduction.scss";
 import heroSvg from "../../assets/images/hero.png";
+import { Link } from "react-router-dom";
 
 const Introduction = () => {
   return (
@@ -19,9 +20,11 @@ const Introduction = () => {
             href="/Nilufar_Shaikh_Resume.pdf"
             download="Nilufar_Shaikh_Resume.pdf"
           >
-            <button className="intro__button">Resume</button>
+            <button className="intro__button">Download Resume</button>
           </a>
-          <button className="intro__button">Reach Out</button>
+          <Link to="mail@nilufarrehanshaikh@gmail.com">
+            <button className="intro__button">Reach Out</button>
+          </Link>
         </div>
       </div>
     </section>

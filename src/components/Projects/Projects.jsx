@@ -1,6 +1,7 @@
 import "./Projects.scss";
 import project1 from "../../assets/images/project1.png";
 import project2 from "../../assets/images/project2.png";
+import { Link } from "react-router-dom";
 
 const Projects = ({ projectsRef }) => {
   const projects = [
@@ -36,7 +37,9 @@ const Projects = ({ projectsRef }) => {
             <div className="card__body">
               <h3 className="card__title">{project.name}</h3>
               <p>{project.desc}</p>
-              <button className="card__button">Github Link</button>
+              <Link to={project.link} target="_blank" rel="noopener noreferrer">
+                <button className="card__button">Github Link</button>
+              </Link>
             </div>
             <div className="card__img-wrapper">
               <img className="card__img" src={project.src} alt={project.name} />
@@ -44,7 +47,14 @@ const Projects = ({ projectsRef }) => {
           </article>
         ))}
       </div>
-      <button className="projects__button">View More</button>
+      <Link
+        to="https://github.com/nilufarshaikh?tab=repositories"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="projects__btn-link"
+      >
+        <button className="projects__button">View More</button>
+      </Link>
     </section>
   );
 };
