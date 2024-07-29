@@ -4,6 +4,10 @@ import project2 from "../../assets/images/projects/socialhive.png";
 import { Link } from "react-router-dom";
 
 const Projects = ({ projectsRef }) => {
+  const viewProjects = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   const projects = [
     {
       name: "Trippeo - Travel Social Media App",
@@ -33,13 +37,16 @@ const Projects = ({ projectsRef }) => {
       <h2 className="projects__title">projects.</h2>
       <div className="projects__items">
         {projects.map((project, index) => (
-          <article key={index} className="card card--one">
+          <article key={index} className="card">
             <div className="card__body">
               <h3 className="card__title">{project.name}</h3>
               <p>{project.desc}</p>
-              <Link to={project.link} target="_blank" rel="noopener noreferrer">
-                <button className="card__button">Github Link</button>
-              </Link>
+              <button
+                onClick={() => viewProjects(project.link)}
+                className="card__button"
+              >
+                Github Link
+              </button>
             </div>
             <div className="card__img-wrapper">
               <img className="card__img" src={project.src} alt={project.name} />
@@ -47,14 +54,14 @@ const Projects = ({ projectsRef }) => {
           </article>
         ))}
       </div>
-      <Link
-        to="https://github.com/nilufarshaikh?tab=repositories"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="projects__btn-link"
+      <button
+        className="projects__button"
+        onClick={() =>
+          viewProjects("https://github.com/nilufarshaikh?tab=repositories")
+        }
       >
-        <button className="projects__button">View More</button>
-      </Link>
+        View More
+      </button>
     </section>
   );
 };

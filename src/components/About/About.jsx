@@ -71,13 +71,12 @@ const About = ({ aboutRef }) => {
           </ul>
           <div className="skills">
             {skills.map((skill, index) => (
-              <div key={index} className="skills__wrapper">
-                <img
-                  className="skills__icon"
-                  src={skill.src}
-                  alt={skill.alt}
-                  title={skill.alt}
-                />
+              <div
+                key={index}
+                className="skills__wrapper tooltip fade"
+                data-title={skill.alt}
+              >
+                <img className="skills__icon" src={skill.src} alt={skill.alt} />
               </div>
             ))}
           </div>
