@@ -23,14 +23,12 @@
     flex-direction: column;
     gap: 16px;
 
-    @include desktop {
+    @include tablet {
       position: relative;
-      align-items: center;
       justify-content: center;
       flex-direction: row;
       padding: 16px 0 0 0;
-      gap: 48px;
-      row-gap: 48px;
+      gap: 24px;
       flex-wrap: wrap;
     }
   }
@@ -56,43 +54,18 @@
 .card {
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  border-radius: 16px;
+  position: relative;
+  width: auto;
+  height: 416px;
+  max-width: 300px;
+  text-align: center;
 
-  @include tablet {
-    flex-direction: row;
-    max-width: 436px;
-    height: auto;
-    padding: 24px;
+  &__title {
+    padding: 16px;
   }
 
-  @include desktop {
-  }
-
-  &__header {
-    width: 72px;
-    overflow: hidden;
-    height: 52px;
-    margin-top: -20px;
-    margin-left: -12px;
-  }
-
-  &__img-wrapper {
-    order: -1;
-    max-width: 300px;
-
-    @include desktop {
-      order: 0;
-      width: 300px;
-      height: 248px;
-    }
-  }
-
-  &__body {
-    @include desktop {
-      width: 300px;
-      height: 248px;
-    }
+  &__info {
+    padding: 4px 16px 16px 16px;
   }
 
   &__img {
@@ -101,19 +74,41 @@
   }
 
   &__button {
-    border: none;
-    padding: 8px 32px;
-    border-radius: 16px;
-    margin-top: 24px;
-    cursor: pointer;
+    width: 100%;
+    padding: 8px 16px;
 
-    @include desktop {
-      position: absolute;
-      bottom: 24px;
+    @include tablet {
+      padding: 12px 24px;
     }
   }
 
-  &__title {
-    margin-bottom: 16px;
+  &__scroller {
+    margin-top: 16px;
+    min-height: 150px;
   }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__tech-stack {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+  }
+}
+
+.tech {
+  font-size: 11px;
+  background-color: #d0d0d0;
+  padding: 4px;
+  border-radius: 4px;
 }

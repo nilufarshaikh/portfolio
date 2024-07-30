@@ -5,7 +5,7 @@ import css from "../../assets/icons/icons8-css3.svg";
 import javascript from "../../assets/icons/icons8-javascript.svg";
 import bootstrap from "../../assets/icons/icons8-bootstrap.svg";
 import express from "../../assets/icons/icons8-express-js.svg";
-import mongo from "../../assets/icons/icons8-mongodb.png";
+import mongo from "../../assets/icons/mongodb.svg";
 import mysql from "../../assets/icons/icons8-mysql.svg";
 import nodejs from "../../assets/icons/icons8-nodejs.svg";
 import sass from "../../assets/icons/icons8-sass.svg";
@@ -21,6 +21,7 @@ const skills = [
   { src: css, alt: "CSS" },
   { src: bootstrap, alt: "Bootstrap" },
   { src: sass, alt: "SASS" },
+  { src: canva, alt: "Canva" },
   { src: javascript, alt: "JavaScript" },
   { src: express, alt: "Express JS" },
   { src: reactjs, alt: "React JS" },
@@ -31,7 +32,6 @@ const skills = [
   { src: python, alt: "Python" },
   { src: mysql, alt: "MySQL" },
   { src: mongo, alt: "Mongo DB" },
-  { src: canva, alt: "Canva" },
 ];
 
 const About = ({ aboutRef }) => {
@@ -96,3 +96,14 @@ const About = ({ aboutRef }) => {
 };
 
 export default About;
+
+// @todo: Looks amazing @Nilufar ! I'm struggling to come up with any critique really, I absolutely love the style and especially the nightmode toggle button (is that an extension or did you hand-craft it?)
+// Only thing I can think of really is the site could use maybe a few small adjustments in tablet/mobile view?  I.e. I would center the section titles in mobile view and either shift the "view more" and "github link" buttons to the right-hand side or make them full-width for easy thumb tapping
+
+// @todo Love the vibes so much, and the light/dark mode toggle is very cool!
+
+// Not sure if this was an issue for anyone else looking but getting the full initial page render (images and such) took about 30 seconds. I tested a few other websites just to make sure it wasn't my connection acting up, and the lighthouse stats seemed to be reflective of a slower load up. It might just be a matter of the the images/media being of a larger size? Here's the checker I ran it through https://lighthouse-metrics.com/
+
+// Also the designs for your projects look very clean. I think putting a high res screenshot of the mobile/Desktop layouts into the github readme could really help to show that off!
+
+// Overall though I love the portfolio, very distinct and it has a ton of personality. I love the little shaking micro interaction you put on the different technology/skill icons
