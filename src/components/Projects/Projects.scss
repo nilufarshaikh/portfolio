@@ -22,8 +22,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: center;
 
     @include tablet {
+      align-items: start;
       position: relative;
       justify-content: center;
       flex-direction: row;
@@ -57,7 +59,7 @@
   position: relative;
   width: auto;
   height: 416px;
-  max-width: 300px;
+  max-width: 320px;
   text-align: center;
 
   &__title {
