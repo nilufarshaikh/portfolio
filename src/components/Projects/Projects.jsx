@@ -93,7 +93,7 @@ const Projects = ({ projectsRef }) => {
                 onClick={() => viewProjects(project.link)}
                 className="card__button"
               >
-                Source Code
+                Github Link
               </button>
             </div>
           </article>
