@@ -25,44 +25,43 @@ const Projects = ({ projectsRef }) => {
       name: "My Portfolio Website",
       desc: "A single page portfolio website that has a light and dark mode.",
       images: [p12, p11],
-      features: [],
       link: "https://github.com/nilufarshaikh/portfolio",
-      techStack: ["HTML", "CSS", "SASS", "React JS"],
+      techStack: ["HTML", "CSS", "SASS", "React.js"],
     },
     {
       name: "Trippeo - Social Media App",
       desc: "A social media app for travelers to share their adventures",
       images: [p21],
       link: "https://github.com/nilufarshaikh/trippeo-client",
-      techStack: ["HTML", "SASS", "React.js", "Node.js", "Mongo DB"],
+      techStack: ["HTML", "SASS", "React.js", "Node.js", "MongoDB"],
     },
     {
       name: "InStock - Inventory System",
       desc: "A software to keep track of warehouses and inventory list.",
       images: [p71, p72, p73, p74],
       link: "https://github.com/laura-nguyen/red-eyed-tree-frog-instock-client",
-      techStack: ["React JS", "Node JS", "Mongo DB"],
+      techStack: ["React.js", "Node.js", "Knex.js", "MySQL"],
     },
     {
       name: "BandSite",
       desc: "A website for a band which comment section and shows list.",
       images: [p41],
       link: "https://github.com/nilufarshaikh/nilufar-shaikh-bandsite",
-      techStack: ["React JS", "Node JS", "Mongo DB"],
+      techStack: ["HTML", "CSS", "SASS", "React.js"],
     },
     {
       name: "Social Hive",
       desc: "A blog site with a real-time chat functionality.",
       images: [p51, p52, p53],
       link: "https://github.com/nilufarshaikh/laravel-chat-application",
-      techStack: ["Laravel", "NodeJS", "MySQL"],
+      techStack: ["Laravel", "Node.js", "MySQL"],
     },
     {
       name: "BrainFlix",
       desc: "A video streaming website that has videos list and upload.",
       images: [p31, p32, p33],
       link: "https://github.com/nilufarshaikh/nilufar-shaikh-brainflix",
-      techStack: ["React JS", "Node JS", "Mongo DB"],
+      techStack: ["HTML", "CSS", "SASS", "React.js", "Node.js"],
     },
   ];
   return (
@@ -76,7 +75,6 @@ const Projects = ({ projectsRef }) => {
               <p className="card__info">{project.desc}</p>
             </div>
             <div className="card_body">
-              <p className="card__subtitle">Tech Stack</p>
               <div className="card__tech-stack">
                 {project.techStack.map((tech, i) => (
                   <span className="tech" key={i}>

@@ -1,9 +1,12 @@
 @use "../../styles/partials/mixins" as *;
 
 .projects {
+  display: flex;
+  flex-direction: column;
+
   @include desktop {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     gap: 24px;
   }
 
@@ -45,6 +48,7 @@
     width: 120px;
     padding: 8px 16px;
     cursor: pointer;
+    align-self: center;
 
     @include desktop {
       align-self: center;
@@ -78,6 +82,7 @@
   &__button {
     width: 100%;
     padding: 8px 16px;
+    cursor: pointer;
 
     @include tablet {
       padding: 12px 24px;
